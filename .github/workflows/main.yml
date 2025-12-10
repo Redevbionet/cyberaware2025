@@ -1,21 +1,7 @@
-            - name: Armory Continuous Deployment-as-a-Service
-  # You may pin to the exact commit or the version.
-  # uses: armory/cli-deploy-action@36fc96b3e295e960d22f96513ef781bb9865a87c
-  uses: armory/cli-deploy-action@v1.0.0
-  with:
-    # Path to the configuration YAML file used to configure your deployment
-    path-to-file: 
-    # extra args to the deployment start command
-    applicationName: # optional
-    # extra context params to the deployment start command
-    addContext: # optional
-    # ClientId for Armory Cloud
-    clientId:
-    # ClientSecret for Armory Cloud
-    clientSecret: 
-    # Intended audience of requests that will use your Armory Cloud authentication token. Is deployHostUrl by default
-    audience: # optional, default is https://api.cloud.armory.io
-    # Armory Cloud authentication provider url
-    tokenIssuerUrl: # optional, default is https://auth.cloud.armory.io/oauth
-    # Location of the Armory Cloud API which will handle your deployment
-    deployHostUrl: # optional, default is api.cloud.armory
+actions-runner-linux-x64-2.329.0.tar.gz
+
+# Create a folder
+$ mkdir actions-runner && cd actions-runner# Download the latest runner package
+$ curl -o actions-runner-linux-x64-2.329.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.329.0/actions-runner-linux-x64-2.329.0.tar.gz# Optional: Validate the hash
+$ echo "194f1e1e4bd02f80b7e9633fc546084d8d4e19f3928a324d512ea53430102e1d  actions-runner-linux-x64-2.329.0.tar.gz" | shasum -a 256 -c# Extract the installer
+$ tar xzf ./actions-runner-linux-x64-2.329.0.tar.gz
