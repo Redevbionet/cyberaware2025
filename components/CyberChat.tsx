@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Bot, User, Loader2 } from 'lucide-react';
+import { Send, Bot, User } from 'lucide-react';
 import { ChatMessage } from '../types';
 import { sendMessageToGemini } from '../services/geminiService';
 
@@ -97,10 +97,17 @@ const CyberChat: React.FC = () => {
           </div>
         ))}
         {isLoading && (
-          <div className="flex justify-start">
-            <div className="bg-slate-700 p-3 rounded-lg rounded-bl-none border border-slate-600 flex items-center space-x-2">
-              <Loader2 className="w-4 h-4 animate-spin text-cyber-accent" />
-              <span className="text-sm text-slate-300">กำลังประมวลผล...</span>
+          <div className="flex justify-start animate-fade-in">
+             <div className="bg-slate-700/80 p-4 rounded-lg rounded-bl-none border border-slate-600 flex items-center gap-4 min-w-[140px]">
+               <Bot size={20} className="text-cyber-accent animate-pulse" />
+               <div className="flex flex-col gap-1">
+                 <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-cyber-accent rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                    <div className="w-2 h-2 bg-cyber-accent rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                    <div className="w-2 h-2 bg-cyber-accent rounded-full animate-bounce"></div>
+                 </div>
+                 <span className="text-[10px] text-slate-400 font-mono tracking-wider">AI IS ANALYZING...</span>
+               </div>
             </div>
           </div>
         )}
