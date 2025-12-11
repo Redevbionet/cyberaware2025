@@ -11,7 +11,9 @@ import {
   Code, 
   AlertTriangle,
   Cpu,
-  Ghost
+  Ghost,
+  Users,
+  Unlock
 } from 'lucide-react';
 import { InfoCardData } from './types';
 
@@ -46,46 +48,40 @@ export const GOALS_DATA: InfoCardData[] = [
 
 export const ATTACK_TYPES: InfoCardData[] = [
   {
-    title: "ฟิชชิ่ง (Phishing)",
-    description: "หลอกลวงให้เหยื่อเปิดเผยข้อมูลส่วนตัวผ่านอีเมลหรือข้อความปลอมที่ดูน่าเชื่อถือ",
+    title: "Phishing (ฟิชชิ่ง)",
+    description: "หลอกลวงให้เหยื่อเปิดเผยข้อมูลส่วนตัวผ่านอีเมล/SMS ที่ดูน่าเชื่อถือ ในปี 2025 มีการใช้ AI สร้างข้อความที่แนบเนียนขึ้น รวมถึง Vishing (เสียง) และ Smishing (SMS)",
     icon: Mail,
     color: "text-yellow-400"
   },
   {
-    title: "มัลแวร์ (Malware)",
-    description: "ซอฟต์แวร์อันตราย เช่น ไวรัส, โทรจัน, สปายแวร์ ที่ถูกสร้างขึ้นเพื่อสร้างความเสียหาย",
+    title: "Malware (มัลแวร์)",
+    description: "ซอฟต์แวร์ประสงค์ร้าย (Virus, Trojan, Spyware) แนวโน้มใหม่คือ Fileless Malware ที่ตรวจสอบยาก และ Polymorphic Malware ที่ปรับเปลี่ยนตัวเองได้",
     icon: Bug,
     color: "text-red-500"
   },
   {
-    title: "แรนซัมแวร์ (Ransomware)",
-    description: "การโจมตีที่ทำการเข้ารหัสไฟล์ของผู้ใช้และเรียกค่าไถ่ในการถอดรหัสคืน",
+    title: "Ransomware (แรนซัมแวร์)",
+    description: "มัลแวร์เข้ารหัสไฟล์เพื่อเรียกค่าไถ่ แนวโน้มรุนแรงแบบ Double Extortion คือทั้งเข้ารหัสและขโมยข้อมูลไปขู่เผยแพร่",
     icon: FileWarning,
     color: "text-rose-500"
   },
   {
-    title: "DDoS",
-    description: "Distributed Denial of Service: ทำให้ระบบล่มโดยการท่วมท้นด้วยปริมาณการเข้าชมจำนวนมหาศาล",
+    title: "DDoS Attack",
+    description: "ทำให้ระบบล่มด้วย Traffic มหาศาล ในปี 2025 พบการใช้ Botnet ขนาดใหญ่ขึ้นและการโจมตีผ่านอุปกรณ์ IoT",
     icon: ShieldAlert,
     color: "text-purple-500"
   },
   {
-    title: "Man-in-the-Middle (MitM)",
-    description: "การดักฟังหรือแอบแก้ไขข้อมูลระหว่างการสื่อสารของสองฝ่าย",
-    icon: RadioReceiver,
-    color: "text-blue-500"
-  },
-  {
-    title: "SQL Injection",
-    description: "โจมตีฐานข้อมูลโดยการแทรกคำสั่ง SQL ที่เป็นอันตรายผ่านช่องกรอกข้อมูล",
-    icon: Code,
-    color: "text-cyan-500"
-  },
-  {
-    title: "Zero-day Exploits",
-    description: "ใช้ประโยชน์จากช่องโหว่ใหม่ที่ผู้ผลิตยังไม่รู้และยังไม่มีแพทช์ป้องกัน",
-    icon: AlertTriangle,
+    title: "Vulnerability Exploitation",
+    description: "การใช้ช่องโหว่ของระบบ (Exploits) โดยเฉพาะช่องโหว่ Zero-Day ที่ผู้ผลิตยังไม่ทราบหรือไม่ทันได้แก้ไข",
+    icon: Unlock,
     color: "text-amber-500"
+  },
+  {
+    title: "Social Engineering",
+    description: "วิศวกรรมสังคม: การหลอกลวงทางจิตวิทยาให้เหยื่อตายใจ ปี 2025 เน้น Spear Phishing ที่ใช้ข้อมูลส่วนตัวเจาะจงเป้าหมาย",
+    icon: Users,
+    color: "text-blue-400"
   }
 ];
 
